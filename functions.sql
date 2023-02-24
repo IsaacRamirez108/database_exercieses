@@ -16,3 +16,10 @@ WHERE YEAR(hire_date) BETWEEN 1990 AND 1999
   AND MONTH(birth_date) = 12
   AND DAYOFMONTH(birth_date) = 25
 ORDER BY birth_date, hire_date DESC;
+
+SELECT first_name, last_name, DATEDIFF(NOW(), hire_date)
+FROM employees
+WHERE YEAR(hire_date) BETWEEN 1990 AND 1999
+  AND MONTH(birth_date) = 12
+  AND DAYOFMONTH(birth_date) = 25
+ORDER BY birth_date, hire_date DESC;
